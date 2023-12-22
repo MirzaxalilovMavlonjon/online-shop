@@ -5,11 +5,10 @@ import Loader from "./Loader";
 import GoodList from "./GoodList";
 import Cart from "./Cart";
 import BasketList from "./BasketList";
-import { toast } from "react-toastify";
 import { ShopContext } from "../context";
 
 export default function Shop() {
-  const { goods, setGoods, loading, order, isBasketShow } =
+  const {  setGoods, loading, order, isBasketShow } =
     useContext(ShopContext);
 
   // API Fetching

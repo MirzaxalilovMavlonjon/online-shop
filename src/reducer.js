@@ -1,9 +1,7 @@
-import { toast } from "react-toastify";
 
 export function reducer(state, { type, payload }) {
   switch (type) {
     case "ADD_TO_BASKET": {
-      toast.success("Goods added to basket successfully!");
       const itemIndex = state.order.findIndex(
         (orderItem) => orderItem.mainId === payload.mainId
       );
@@ -68,7 +66,6 @@ export function reducer(state, { type, payload }) {
         isBasketShow: !state.isBasketShow,
       };
     case "REMOVE_FROM_BASKET":
-      toast.error('Goods deleted from basket successfully!')
       return {
         ...state,
         order: state.order.filter((item) => item.mainId !== payload.id),
